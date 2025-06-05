@@ -1,0 +1,11 @@
+[build]
+target = "thumbv7em-none-eabihf"
+
+[unstable]
+build-std = ["core", "compiler_builtins"]
+
+# [target.thumbv7em-none-eabihf]
+# runner = "arm-none-eabi-gdb"
+
+[env]
+RUSTC_BOOTSTRAP = "1"
