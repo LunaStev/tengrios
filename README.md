@@ -1,4 +1,12 @@
 # Tengri OS
+
+<div align="center">
+
+![img.png](.github/img.png)
+
+</div>
+
+
 Tengri OS is an operating system written entirely in Rust, designed with a focus on development simplicity, modularity, and future extensibility.
 
 Built around a CLI-first interface, Tengri OS lays the groundwork for a system that's minimal yet powerful. While currently command-line based, its architecture is consciously designed with graphical environments in mind, allowing for natural progression toward more interactive experiences in the future.
