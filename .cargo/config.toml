@@ -5,8 +5,8 @@ target = "x86_64-tengrios.json"
 build-std-features = ["compiler-builtins-mem"]
 build-std = ["core", "compiler_builtins"]
 
-# [target.thumbv7em-none-eabihf]
-# runner = "arm-none-eabi-gdb"
+[target.'cfg(target_os = "none")']
+runner = "bootimage runner"
 
 [env]
 RUSTC_BOOTSTRAP = "1"
