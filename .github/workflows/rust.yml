@@ -26,6 +26,9 @@ jobs:
       - name: Install bootimage
         run: cargo install bootimage
 
+      - name: Install QEMU
+        run: sudo apt-get update && sudo apt-get install -y qemu-system-x86
+
       - name: Build kernel
         run: cargo build
 
