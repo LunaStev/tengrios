@@ -1,4 +1,4 @@
-name: Rust Kernel Test
+name: Rust Kernel CI
 
 on:
   push:
@@ -16,20 +16,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install Rust nightly
+      - name: Install Rust nightly + components
         run: |
           rustup install nightly
           rustup default nightly
           rustup component add rust-src
 
-      - name: Add target
-        run: rustup target add x86_64-tengrios
-
       - name: Install bootimage
         run: cargo install bootimage
 
-      - name: Build Kernel (bootimage)
-        run: cargo build --target x86_64-tengrios
+      - name: Build kernel
+        run: cargo build
 
-      - name: Run Kernel Tests
-        run: cargo test --target x86_64-tengrios
+      - name: Run kernel tests
+        run: cargo test
